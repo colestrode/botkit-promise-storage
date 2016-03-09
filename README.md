@@ -10,7 +10,6 @@ Returns a promise-based storage interface for botkit
 var controller = require('botkit').slackbot();
 var promiseStorage = require('botkit-promise-storage')(controller);
 
-
 promiseStorage.teams.get('teamId')
   .then(function(team) {
     console.log(team);
@@ -19,6 +18,10 @@ promiseStorage.teams.get('teamId')
     console.log(err);
   });
 ```
+
+## Interface
+
+The returned storage object has the same interface as `controller.storage`, except each method returns a promise.
 
 ## Notes
 
