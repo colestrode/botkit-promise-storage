@@ -1,0 +1,39 @@
+{
+  "name": "botkit-promise-storage",
+  "version": "1.0.0",
+  "description": "Creates a promise-based storage interface for botkit",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "eslint index.js ./test",
+    "test": "istanbul cover --report lcov --dir coverage/ _mocha ./test -- --colors --recursive",
+    "ci": "npm test && cat ./coverage/lcov.info | coveralls"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/colestrode/botkit-promise-storage.git"
+  },
+  "keywords": [
+    "botkit",
+    "promise",
+    "storage"
+  ],
+  "author": "Cole Furfaro-Strode",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/colestrode/botkit-promise-storage/issues"
+  },
+  "homepage": "https://github.com/colestrode/botkit-promise-storage#readme",
+  "dependencies": {
+    "lodash": "^4.6.1",
+    "q": "^1.4.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.8",
+    "eslint": "^2.3.0",
+    "istanbul": "^0.4.2",
+    "mocha": "^2.4.5",
+    "sinon": "^1.17.3",
+    "sinon-chai": "^2.8.0"
+  }
+}
