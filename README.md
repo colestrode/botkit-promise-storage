@@ -26,3 +26,4 @@ The returned storage object has the same interface as `controller.storage`, exce
 ## Notes
 
 This uses the promises A+ compliant [q](https://github.com/kriskowal/q) library for promises.
+
