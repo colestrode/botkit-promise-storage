@@ -2,7 +2,7 @@
 [![Build Status](https://travis-ci.org/colestrode/botkit-promise-storage.svg?branch=master)](https://travis-ci.org/colestrode/botkit-promise-storage)
 [![Coverage Status](https://coveralls.io/repos/github/colestrode/botkit-promise-storage/badge.svg?branch=master)](https://coveralls.io/github/colestrode/botkit-promise-storage?branch=master)
 
-Returns a promise-based storage interface for botkit
+Returns a promise-based storage interface for botkit.
 
 ## Usage
 
@@ -19,9 +19,13 @@ promiseStorage.teams.get('teamId')
   });
 ```
 
+This doesn't overwrite the storage interface for botkit but instead provides a new one interface you can use. Botkit 
+relies on its own callback-based storage interface internally, so do not overwrite the existing storage module.
+
 ## Interface
 
 The returned storage object has the same interface as `controller.storage`, except each method returns a promise.
+The following methods are exported for each scope (`teams`, `channels`, `users`):
 
 ### all
 
