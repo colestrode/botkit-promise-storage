@@ -24,8 +24,8 @@ relies on its own callback-based storage interface internally, so do not overwri
 
 ## Interface
 
-The returned storage object has the same interface as `controller.storage`, except each method returns a promise.
-The following methods are exported for each scope (`teams`, `channels`, `users`):
+The returned storage object has the same interface as `controller.storage` with the addition of a `merge` method.
+Each method returns a promise. The following methods are exported for each scope (`teams`, `channels`, `users`):
 
 ### all
 
